@@ -1,0 +1,31 @@
+<h1>Listing nominations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Candidate</th>
+      <th>Seat</th>
+      <th>Party</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nominations.each do |nomination| %>
+      <tr>
+        <td><%= nomination.candidate %></td>
+        <td><%= nomination.seat %></td>
+        <td><%= nomination.party %></td>
+        <td><%= nomination.year %></td>
+        <td><%= link_to 'Show', nomination %></td>
+        <td><%= link_to 'Edit', edit_nomination_path(nomination) %></td>
+        <td><%= link_to 'Destroy', nomination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nomination', new_nomination_path %>

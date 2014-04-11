@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @seat.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @seat.type %>
+</p>
+
+<%= link_to 'Edit', [:edit , @seat] %> |
+<%= link_to 'Back', seats_path %>

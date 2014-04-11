@@ -1,0 +1,2 @@
+class Mla < Seat
+end

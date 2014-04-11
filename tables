@@ -1,0 +1,13 @@
+seat
+
+candidate
+name
+dob
+
+party
+name
+
+
+
+nomination
+seat_id candidate_id party_id year
