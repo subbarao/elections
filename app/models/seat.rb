@@ -1,3 +1,3 @@
 class Seat < ActiveRecord::Base
-  has_many :seats
+  has_many :nominations
 end
