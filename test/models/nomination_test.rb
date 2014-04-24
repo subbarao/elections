@@ -13,10 +13,9 @@ class NominationTest < ActiveSupport::TestCase
     nomination1 = Nomination.create(party: party1, candidate: candidate1, seat: mp)
     nomination2 = Nomination.create(party: party2, candidate: candidate2, seat: mp)
 
-    assert_equal mp.nominations, [ nomination1, nomination2]
+    assert_equal true, nomination1.valid?
+		assert_not_equal true, nomination2.nil?
   end
 
-  # test "the truth" do
-  #   assert true
-  # end
+
 end
